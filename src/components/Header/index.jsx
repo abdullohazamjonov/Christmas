@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 import { BsGrid } from "react-icons/bs";
-import header from "../../assets/image/header.svg"
 import logo_white from "../../assets/image/logo_white.svg";
 import logo_dark from "../../assets/image/logo_dark.svg";
 
@@ -38,9 +37,7 @@ const Header = () => {
           </div>
       </div>
       <div className={`xl:hidden fixed inset-0 bg-black/30 flex items-start justify-center p-5 transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-        <div className="relative w-full max-w-sm bg-white dark:bg-[#1a1a1a] rounded-[2rem] pt-20 pb-16 shadow-xl">
-          <img
-            src={header} alt="" className="absolute top-0 left-0 w-24"/>
+        <div className="relative w-full max-w-6xl bg-white dark:bg-[#1a1a1a] pt-20 pb-16 shadow-xl">
           <button onClick={() => setIsOpen(false)} className="absolute top-5 right-6 text-3xl text-black dark:text-white">
             <FaXmark />
           </button>

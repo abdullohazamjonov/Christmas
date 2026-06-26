@@ -11,44 +11,44 @@ const Footer = () => {
   const [theme] = useDarkMode();
 
   return (
-    <footer className="relative py-16 bg-[#2b1f21] overflow-hidden">
+    <footer className="relative py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col xl:grid xl:grid-cols-4 gap-10">
           <div>
             <img src={theme === "light" ? logo_white : logo_dark} alt="Christmas Logo" className="mb-5"/>
-            <p className="text-gray-300 leading-7">
+            <p className="text-black dark:text-gray-300 leading-7">
               This Christmas give
               <br />
               a lot of love
             </p>
           </div>
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
+            <h3 className="text-black dark:text-white text-xl font-bold mb-4">
               Our Services
             </h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-black dark:text-white ">
               <li>Pricing</li>
               <li>Discounts</li>
               <li>Shipping mode</li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
+            <h3 className="text-black dark:text-white  text-xl font-bold mb-4">
               Support
             </h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-black dark:text-white ">
               <li>FAQs</li>
               <li>Support center</li>
               <li>Contact Us</li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">
+            <h3 className="text-black dark:text-white text-xl font-bold mb-4">
               Available On
             </h3>
             <div className="flex flex-col gap-3">
-              <img src={google_play} alt="" className="w-32"/>
-              <img src={app_store} alt="" className="w-32"/>
+              <li><a href=""><img src={google_play} alt="" className="w-32"/></a></li>
+              <li><a href=""><img src={app_store} alt="" className="w-32"/></a></li>
             </div>
           </div>
         </div>
@@ -56,8 +56,8 @@ const Footer = () => {
           © Bedimcode. All rights reserved
         </p>
       </div>
-      <img src={footer1} alt="" className="absolute right-4 top-44 w-20 xl:w-28" />
-      <img src={footer2} alt="" className="absolute right-2 bottom-20 w-20 xl:w-28"/>
+      <img src={footer1} alt="" className="absolute right-1 top-44 xl:left-10 w-20 xl:w-28" />
+      <img src={footer2} alt="" className="absolute right-4 bottom-20 w-20 xl:w-28"/>
     </footer>
   );
 };
